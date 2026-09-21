@@ -1,49 +1,51 @@
-# Movie Recommendation System 🎬
+# RetailPulse – Multi-Branch Sales & Inventory Analytics Dashboard
 
-A web-based movie recommendation system that helps users discover movies based on their preferences, selected genres, and movie ratings.
-
-## 📌 Project Status
-🚧 **In Development / Ongoing**
+An interactive Business Intelligence solution built in Power BI to monitor multi-branch retail performance, evaluate product margins, and detect stockout risks.
 
 ---
 
-## 📖 Overview
-The **Movie Recommendation System** is an individual project developed to explore recommendation techniques and practical web application development. The system allows users to search for movies, view detailed metadata, and receive personalized recommendations based on their viewing preferences and ratings.
+## 📌 Project Overview
+RetailPulse centralizes fragmented transactional and stock records across multiple retail branches into a unified dashboard. It helps store managers and supply chain teams make data-backed decisions around pricing, category performance, and inventory replenishment.
+
+### Key Objectives
+* **Sales Performance:** Track overall revenue, sales volume, and regional growth across retail outlets.
+* **Margin Analysis:** Evaluate product- and branch-level profitability using Gross Profit Margin metrics.
+* **Inventory Optimization:** Monitor inventory turnover and flag high-risk stockout thresholds early to prevent supply disruptions.
 
 ---
 
-## ✨ Key Features
-- **Search & Discovery:** Search and browse a comprehensive movie catalog.
-- **Detailed Metadata:** View movie descriptions, genres, ratings, and posters via API integration.
-- **Smart Recommendations:** Genre-based and preference-driven suggestion engine.
-- **Preference Tracking:** Rate movies and store user preferences.
-- **Responsive Web UI:** Clean, intuitive, and mobile-friendly interface.
+## 🛠️ Tools & Technologies
+* **Business Intelligence:** Power BI Desktop
+* **Data Transformation:** Power Query (ETL, schema normalization, data cleaning)
+* **Calculations & Analytics:** DAX (Data Analysis Expressions)
+* **Data Source & Querying:** SQL, Microsoft Excel
+* **Project Management:** Trello
 
 ---
 
-## 🛠️ Technologies
-- **Backend:** Python, Flask, REST APIs
-- **Frontend:** HTML5, CSS3, JavaScript
-- **Database:** SQLite / MySQL
-- **Version Control & Tools:** Git, GitHub, Postman, VS Code
+## 🏗️ Data Architecture & Modeling
+* **Data Modeling:** Implemented a star schema with separated fact tables (Sales Transactions, Inventory Snapshots) and dimension tables (Store Locations, Products, Calendar/Dates).
+* **ETL Workflow:** Cleansed raw data, normalized inconsistent branch labels, handled null values, and established strict relationship cardinalities (1-to-many) in Power Query.
 
 ---
 
-## 🧠 Planned Recommendation Approach
-- **Phase 1:** Rule-based filtering using genres, user preferences, and rating thresholds.
-- **Phase 2:** Advanced recommendation algorithms incorporating content-based filtering and cosine similarity techniques.
+## 📊 Dashboard Features & Views
+* **Executive Summary:** High-level KPI cards covering Total Revenue, Gross Profit, and Average Inventory Turnover.
+* **Store & Regional Drill-Down:** Dynamic views enabling branch-by-branch performance and margin comparisons.
+* **Category & Seasonal Trends:** Visual breakdowns of best-performing product lines over monthly and seasonal periods.
+* **Interactive Slicers:** Dynamic cross-filtering by date range, branch location, and product category.
 
 ---
 
-## 🎯 Learning Objectives
-- Building RESTful services and backend architecture using Python & Flask.
-- Integrating external third-party APIs.
-- Designing relational database schemas for preference tracking.
-- Implementing fundamental recommendation and filtering algorithms.
-
----
-
-## 🚀 Roadmap & Future Enhancements
-- [ ] User authentication & personalized profile management.
-- [ ] Integration of content-based collaborative filtering models.
-- [ ] Cloud deployment (Render / Heroku / AWS).
+## 📂 Repository Structure
+```text
+├── data/
+│   ├── raw/                 # Raw transactional and inventory source files
+│   └── processed/           # Cleaned datasets and lookup dimensions
+├── sql/
+│   └── schema_and_queries/  # SQL extraction and staging scripts
+├── dashboard/
+│   └── RetailPulse.pbix     # Power BI report and data model
+├── docs/
+│   └── screenshots/         # Dashboard previews and schema diagrams
+└── README.md
