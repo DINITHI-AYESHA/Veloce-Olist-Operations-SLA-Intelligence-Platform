@@ -1,51 +1,35 @@
-# RetailPulse – Multi-Branch Sales & Inventory Analytics Dashboard
+# Veloce: Olist Marketplace Operations & Logistics Intelligence
 
-An interactive Business Intelligence solution built in Power BI to monitor multi-branch retail performance, evaluate product margins, and detect stockout risks.
+[![Power BI](https://img.shields.io/badge/Power_BI-Desktop-F2C811?logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
+[![Status](https://img.shields.io/badge/Project_Status-In_Development-blue)](#)
+[![Data Source](https://img.shields.io/badge/Dataset-Kaggle_Olist-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
----
-
-## 📌 Project Overview
-RetailPulse centralizes fragmented transactional and stock records across multiple retail branches into a unified dashboard. It helps store managers and supply chain teams make data-backed decisions around pricing, category performance, and inventory replenishment.
-
-### Key Objectives
-* **Sales Performance:** Track overall revenue, sales volume, and regional growth across retail outlets.
-* **Margin Analysis:** Evaluate product- and branch-level profitability using Gross Profit Margin metrics.
-* **Inventory Optimization:** Monitor inventory turnover and flag high-risk stockout thresholds early to prevent supply disruptions.
+An enterprise Business Intelligence and Operations Analytics portfolio project delivering end-to-end operational visibility into Brazilian e-commerce logistics, delivery Service Level Agreement (SLA) breaches, and marketplace growth dynamics.
 
 ---
 
-## 🛠️ Tools & Technologies
-* **Business Intelligence:** Power BI Desktop
-* **Data Transformation:** Power Query (ETL, schema normalization, data cleaning)
-* **Calculations & Analytics:** DAX (Data Analysis Expressions)
-* **Data Source & Querying:** SQL, Microsoft Excel
-* **Project Management:** Trello
+## 📌 Business Problem & Executive Context
+Olist operates a nationwide marketplace connecting independent small businesses across Brazil to national retail channels. Operating across Brazil's complex interstate logistics network creates three primary operational vulnerabilities:
+
+1. **Regional SLA Variance:** Unpredictable carrier lead times lead to unmonitored customer delivery delays and platform dissatisfaction.
+2. **Fulfillment Lead Time Lag:** Bottlenecks between merchant order approval and carrier dispatch compound shipping risks.
+3. **Freight Economics Disparity:** High freight-to-price ratios in distant states suppress conversion and reduce net order profitability.
+
+**Objective:** Design an interactive, executive-grade Power BI dashboard backed by structured Business Analysis deliverables (BRD, KPI Dictionary, Agile Stories) to monitor fulfillment health, enforce carrier SLAs, and optimize regional revenue distribution.
 
 ---
 
-## 🏗️ Data Architecture & Modeling
-* **Data Modeling:** Implemented a star schema with separated fact tables (Sales Transactions, Inventory Snapshots) and dimension tables (Store Locations, Products, Calendar/Dates).
-* **ETL Workflow:** Cleansed raw data, normalized inconsistent branch labels, handled null values, and established strict relationship cardinalities (1-to-many) in Power Query.
+## 🏗️ Repository Architecture
 
----
-
-## 📊 Dashboard Features & Views
-* **Executive Summary:** High-level KPI cards covering Total Revenue, Gross Profit, and Average Inventory Turnover.
-* **Store & Regional Drill-Down:** Dynamic views enabling branch-by-branch performance and margin comparisons.
-* **Category & Seasonal Trends:** Visual breakdowns of best-performing product lines over monthly and seasonal periods.
-* **Interactive Slicers:** Dynamic cross-filtering by date range, branch location, and product category.
-
----
-
-## 📂 Repository Structure
 ```text
+├── docs/                     # Formal BA Documentation
+│   ├── BRD.md                # Business Requirements Document
+│   ├── KPI_DICTIONARY.md     # Business metric definitions & calculation logic
+│   └── TRELLO_BACKLOG.md     # Agile user stories & Gherkin acceptance criteria
 ├── data/
-│   ├── raw/                 # Raw transactional and inventory source files
-│   └── processed/           # Cleaned datasets and lookup dimensions
-├── sql/
-│   └── schema_and_queries/  # SQL extraction and staging scripts
-├── dashboard/
-│   └── RetailPulse.pbix     # Power BI report and data model
-├── docs/
-│   └── screenshots/         # Dashboard previews and schema diagrams
-└── README.md
+│   ├── raw/                  # Kaggle CSV extracts (.gitignore tracked)
+│   └── data_dictionary.md    # Raw data grain, data types, and integrity notes
+├── pbix/                     # Power BI report files (.pbix)
+├── assets/                   # Architecture diagrams, wireframes, and UI screenshots
+├── .gitignore                # Excludes large CSVs and Power BI temp files
+└── README.md                 # Project executive summary
