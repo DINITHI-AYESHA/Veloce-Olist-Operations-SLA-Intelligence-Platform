@@ -216,3 +216,17 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ==========================================
+# Olist BI Project Specific Ignores
+# ==========================================
+
+# Ignore large raw dataset files
+data/raw/*.csv
+data/raw/*.zip
+*.csv
+*.zip
+
+# Ignore Power BI recovery and temporary files
+*.tmp
+*.pbix.temp
